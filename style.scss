@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+$color1: #1f1147;
+$color2: #361e70;
+$color3: #32167c;
+$color4: #6949fd;
+$color5: #49fd85;
+
+body {
+  background: $color1;
+  position: relative;
+
+  .header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $color1;
+
+    h1 {
+      text-align: center;
+      color: $color5;
+      font-size: 2rem;
+      padding: 0.8rem;
+    }
+  }
+
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px auto;
+
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+
+      h3 {
+        color: $color5;
+        font-size: 16px;
+      }
+
+      h4 {
+        color: #fff;
+        font-size: 23px;
+        margin-bottom: 10px;
+      }
+
+      .options {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%;
+
+        input[type="radio"]{
+          display: none;
+        }
+
+        label{
+          display: inline-block;
+          cursor: pointer;
+          width: 100%;
+          padding: 10px 20px;
+          border-radius: 12px;
+          background-color: $color3;
+          color: #fff;
+          font-size: 19px;
+          transition: background 0.3s ease;
+        }
+
+        input [type="radio"]:checked ~ label {
+          background: $color5;
+          color:#fff;
+        }
+
+        input[type="radio"]:hover ~ label {
+          border: 2px solid $color5;
+        }
+      }
+
+      .btns {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .btn {
+          border: none;
+          border-radius: 12px;
+          background: $color4;
+          padding: 10px 30px;
+          color: #fff;
+          font-size: 17px;
+          margin-top: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.qbtns {
+  display: flex;
+  justify-content: flex-end;
+
+  .btna {
+    border: none;
+    border-radius: 12px;
+    background: $color4;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 12px;
+  }
+}
