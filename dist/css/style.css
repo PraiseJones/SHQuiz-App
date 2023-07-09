@@ -13,7 +13,8 @@ body {
   background: #1f1147;
   position: relative;
 }
-body .header {
+
+.header {
   display: flex;
   position: fixed;
   top: 0;
@@ -22,13 +23,14 @@ body .header {
   width: 100%;
   background-color: #1f1147;
 }
-body .header h1 {
+.header h1 {
   text-align: center;
-  color: #49fd85;
+  color: #49fdb8;
   font-size: 2rem;
   padding: 0.8rem;
 }
-body .form-wrapper {
+
+.form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +38,7 @@ body .form-wrapper {
   width: 50%;
   margin: 10px auto;
 }
-body .form-wrapper .form {
+.form-wrapper .form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,48 +46,49 @@ body .form-wrapper .form {
   height: 100vh;
   padding: 20px;
 }
-body .form-wrapper .form h3 {
-  color: #49fd85;
+.form-wrapper .form h3 {
+  color: #49fdb8;
   font-size: 16px;
 }
-body .form-wrapper .form h4 {
+.form-wrapper .form h4 {
   color: #fff;
   font-size: 23px;
   margin-bottom: 10px;
 }
-body .form-wrapper .form .options {
+.form-wrapper .form .options {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   width: 100%;
 }
-body .form-wrapper .form .options input[type=radio] {
+.form-wrapper .form .options input[type=radio] {
   display: none;
 }
-body .form-wrapper .form .options label {
+.form-wrapper .form .options label {
   display: inline-block;
   cursor: pointer;
   width: 100%;
   padding: 10px 20px;
+  border: 2px solid #32167c;
   border-radius: 12px;
   background-color: #32167c;
   color: #fff;
   font-size: 19px;
-  transition: background 0.3s ease;
+  transition: background 0.3s cubic-bezier(0.99, 0, 0.35, 1);
 }
-body .form-wrapper .form .options input [type=radio]:checked ~ label {
-  background: #49fd85;
+.form-wrapper .form .options input[type=radio]:checked ~ label {
+  background: #49fdb8;
   color: #fff;
 }
-body .form-wrapper .form .options input[type=radio]:hover ~ label {
-  border: 2px solid #49fd85;
+.form-wrapper .form .options input[type=radio]:hover ~ label {
+  border: 2px solid #49fdb8;
 }
-body .form-wrapper .form .btns {
+.form-wrapper .form .btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-body .form-wrapper .form .btns .btn {
+.form-wrapper .form .btns .btn {
   border: none;
   border-radius: 12px;
   background: #6949fd;
@@ -108,4 +111,57 @@ body .form-wrapper .form .btns .btn {
   color: #fff;
   font-size: 17px;
   margin-top: 12px;
+}
+
+.popup-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.popup-container .pop-up {
+  margin: 10% auto;
+  background: #1f1147;
+  color: #fff;
+  width: 30%;
+  min-width: 250px;
+  height: 280px;
+  border-radius: 14px;
+  text-align: center;
+  padding: 20px;
+  animation: appear 0.4s ease-in-out both;
+}
+.popup-container .pop-up h2 {
+  color: #49fdb8;
+}
+.popup-container .pop-up p span {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.popup-container .pop-up .closebtn {
+  border: none;
+  border-radius: 12px;
+  background: #6949fd;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+@keyframes appear {
+  from, to {
+    transform: none;
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  from {
+    transform: scale(0);
+  }
 }
