@@ -43,6 +43,11 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 810px) {
+  .form-wrapper {
+    width: 80%;
+  }
+}
 .form-wrapper .form {
   display: flex;
   justify-content: center;
@@ -105,6 +110,7 @@ body {
 }
 
 .qbtns {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -169,4 +175,12 @@ body {
   from {
     transform: scale(0);
   }
+}
+.correct {
+  background: #49fd85;
+  color: #1F1147;
+}
+
+.incorrect {
+  background: crimson;
 }
