@@ -32,4 +32,5 @@ form.addEventListener("submit", (e) => {
 
 close.addEventListener('click', () => {
   popup.style.display = 'none';
+  window.location.reload();
 })
