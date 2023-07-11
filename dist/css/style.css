@@ -10,7 +10,7 @@
 }
 
 body {
-  background: #1f1147;
+  background: #1F1147;
   position: relative;
 }
 
@@ -21,11 +21,11 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #1f1147;
+  background-color: #1F1147;
 }
 .header h1 {
   text-align: center;
-  color: #49fdb8;
+  color: #49fd85;
   font-size: 2rem;
   padding: 0.8rem;
 }
@@ -38,6 +38,11 @@ body {
   width: 50%;
   margin: 10px auto;
 }
+@media screen and (max-width: 428px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}
 .form-wrapper .form {
   display: flex;
   justify-content: center;
@@ -47,7 +52,7 @@ body {
   padding: 20px;
 }
 .form-wrapper .form h3 {
-  color: #49fdb8;
+  color: #49fd85;
   font-size: 16px;
 }
 .form-wrapper .form h4 {
@@ -69,19 +74,19 @@ body {
   cursor: pointer;
   width: 100%;
   padding: 10px 20px;
-  border: 2px solid #32167c;
+  border: 2px solid #32167C;
   border-radius: 12px;
-  background-color: #32167c;
+  background-color: #32167C;
   color: #fff;
   font-size: 19px;
   transition: background 0.3s cubic-bezier(0.99, 0, 0.35, 1);
 }
 .form-wrapper .form .options input[type=radio]:checked ~ label {
-  background: #49fdb8;
+  background: #49fd85;
   color: #fff;
 }
 .form-wrapper .form .options input[type=radio]:hover ~ label {
-  border: 2px solid #49fdb8;
+  border: 2px solid #49fd85;
 }
 .form-wrapper .form .btns {
   display: flex;
@@ -91,7 +96,7 @@ body {
 .form-wrapper .form .btns .btn {
   border: none;
   border-radius: 12px;
-  background: #6949fd;
+  background: #6949FD;
   padding: 10px 30px;
   color: #fff;
   font-size: 17px;
@@ -106,7 +111,7 @@ body {
 .qbtns .btna {
   border: none;
   border-radius: 12px;
-  background: #6949fd;
+  background: #6949FD;
   padding: 10px 30px;
   color: #fff;
   font-size: 17px;
@@ -127,7 +132,7 @@ body {
 }
 .popup-container .pop-up {
   margin: 10% auto;
-  background: #1f1147;
+  background: #1F1147;
   color: #fff;
   width: 30%;
   min-width: 250px;
@@ -138,7 +143,7 @@ body {
   animation: appear 0.4s ease-in-out both;
 }
 .popup-container .pop-up h2 {
-  color: #49fdb8;
+  color: #49fd85;
 }
 .popup-container .pop-up p span {
   font-size: 6rem;
@@ -147,7 +152,7 @@ body {
 .popup-container .pop-up .closebtn {
   border: none;
   border-radius: 12px;
-  background: #6949fd;
+  background: #6949FD;
   padding: 10px 30px;
   color: #fff;
   font-size: 20px;

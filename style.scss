@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+@import "_variable.scss";
 * {
   padding: 0;
   margin: 0;
@@ -9,11 +11,11 @@
   text-decoration: none;
 }
 
-$color1: #1f1147;
-$color2: #361e70;
-$color3: #32167c;
-$color4: #6949fd;
-$color5: #49fdb8;
+// $color1: #1f1147;
+// $color2: #361e70;
+// $color3: #32167c;
+// $color4: #6949fd;
+// $color5: #49fdb8;
 
 body {
   background: $color1;
@@ -43,6 +45,10 @@ body {
   flex-direction: column;
   width: 50%;
   margin: 10px auto;
+
+  @include responsive('mobile'){
+      width: 100%;
+  }
 
   .form {
     display: flex;
@@ -176,15 +182,24 @@ body {
 
 @keyframes appear {
   from,
-  to{
+  to {
     transform: none;
   }
 
   50% {
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 
-  from{
+  from {
     transform: scale(0);
   }
+}
+
+.correct {
+  background: $color5;
+  color: $color1;
+}
+
+.incorrect {
+  background: crimson;
 }

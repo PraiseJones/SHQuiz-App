@@ -2,8 +2,7 @@ const form = document.querySelector(".form-wrapper");
 const popup = document.querySelector('.popup-container')
 const scoreSpan = document.querySelector('span');
 const close = document.querySelector('.closebtn');
-const label = document.q
-const correctAns = ["B", "A", "A", "C"];
+const correctAns = ["A", "B", "B", "A"];
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -13,9 +12,7 @@ form.addEventListener("submit", (e) => {
 
   userAns.forEach((answers, index) => {
     if (answers === correctAns[index]) {
-      score += 10;
-    } else{
-      label
+      score += 20;
     }
   });
 
